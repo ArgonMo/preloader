@@ -1,0 +1,127 @@
+.loader {
+    z-index:9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    
+    transition: opacity 2s, visibility 2s;
+    }
+
+.loader--hidden {
+    visibility: hidden;
+    }
+
+.hline-container{
+    display: inline-block;
+    position: fixed;
+    width: 100%;
+    order: 2;
+}
+
+.hline{
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    /* margin: 50px; */
+    margin-left: 0;
+    animation: linesX 2.3s ease;
+    z-index: 1;
+}
+
+.hline1{
+    margin-top: 40px;
+    animation-delay: 0.02s;
+}
+
+.hline2{
+    margin-top: 80px;
+    animation-delay: 0.04s;
+}
+
+.hline3{
+    /* margin-top: 40%; */
+    animation-delay: 0.06s;
+}
+
+.hline4{
+    animation-delay: 0.08s;
+}
+
+.vline-container{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    height: 100%;
+    order: 1;
+}
+
+.vline{
+    width: 2px;
+    height: 0;
+    background-color: #000;
+    /* margin: 30px; */
+    margin-top: 0;
+    animation: linesY 1.5s ease;
+    animation-delay: 0.8s;
+    z-index: 1;
+}
+
+
+.mklogo{
+    z-index: 3;
+    opacity: 0;
+    animation: fadeIn 1.3s;
+    animation-delay: 1s;
+}
+
+.vline2{
+    margin-left: 200px;
+}
+
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+    }
+
+
+@keyframes linesX {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+    }
+@keyframes linesY {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+    }
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 100;
+    }
+}
+
+.imgcontainer{
+    z-index: 10;
+    background-color: #fff;
+}
